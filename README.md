@@ -1,3 +1,6 @@
+以下リポジトリを自分のアプリに適用  
+https://github.com/tken2039/django-nginx-gunicorn-docker  
+
 # django-nginx-gunicorn-docker
 
 Django+nginx+gunicornでのデプロイを一瞬で実行するdocker-composeです。
@@ -33,8 +36,8 @@ django-nginx-gunicorn-docker/
       └ docker-compose.yml
 ```
 
-上記のディレクトリツリーの[DJANGOPROJECT]が、あなたのDjangoProjectになるよう配置してください。（[PROJECTNAME]は、settings.pyなどが入っているディレクトリです。）
-20201004_BoardAppを配置している
+上記のディレクトリツリーの[DJANGOPROJECT]が、あなたのDjangoProjectになるよう配置してください。（[PROJECTNAME]は、settings.pyなどが入っているディレクトリです。）  
+20201004_BoardAppを配置している  
 (Place [DJANGOPROJECT] to be your DjangoProject. ([PROJECTNAME] directory contains settings.py etc.))
 
 ### ・Execution
