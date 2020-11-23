@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    社内SNS
+</div>
+{% endblock header %}
+
+{% block contents %}
+<div class="container">
+    <a href="{% url 'create' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">投稿する</a>
+    {% for item in object_list %}
+    <div class="alert alert-secondary" role="alert">
+        <p>タイトル：{{item.title}}</p>
+        <p>投稿者：{{item.author}}</p>
+        <a href="{% url 'good' item.pk %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">いいね：{{item.good}}</a>
+        <a href="{% url 'detail' item.pk %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">詳細画面</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock contents %}
+
+

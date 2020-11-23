@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    <a href="{% url 'list' %}">投稿画面</a>
+</div>
+{% endblock header %}
+
+{% block contents %}
+
+<form action='' method='POST' enctype="multipart/form-data">{% csrf_token %}
+{{form.as_p}}
+<input type='submit' value='投稿する'>
+</form>
+
+{% endblock contents %}
+

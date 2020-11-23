@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+  <a href="{% url 'list' %}">個別投稿</a>
+</div>
+{% endblock header %}
+
+{% block contents %}
+<div class="container">
+    <div class="alert alert-secondary" role="alert">
+        <p>タイトル：{{object.title}}</p>
+        <p>投稿者：{{object.author}}</p>
+        <p>内容：{{object.content}}</p>
+        <p><img src="{{object.images.url}}" width="300"></p>
+        <a href="{% url 'good' object.pk %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">いいね：{{object.good}}</a>
+    </div>
+</div>
+{% endblock contents %}
+
+
