@@ -26,30 +26,16 @@ django-nginx-gunicorn-docker/
       ├ django/
       │  ├ Dockerfile
       │  ├ requirements.txt
-      │  └ [DJANGOPROJECT]
+      │  └ 20201004_BoardApp
       │     ├ manage.py
       │     ├ …
-      │     └ [PROJECTNAME]
+      │     └ config
       └ docker-compose.yml
 ```
 
 上記のディレクトリツリーの[DJANGOPROJECT]が、あなたのDjangoProjectになるよう配置してください。（[PROJECTNAME]は、settings.pyなどが入っているディレクトリです。）
-
+20201004_BoardAppを配置している
 (Place [DJANGOPROJECT] to be your DjangoProject. ([PROJECTNAME] directory contains settings.py etc.))
-
-
-### ・Setting
-django/Dockerfileの一部を編集します。直接編集も可能ですが、LinuxOSの方は以下のコマンドを使うと楽ちんです。
-
-(Edit part of django/Dockerfile. For LinuxOS, use the following command.)
-
-```
-$ sed -i -e s/MYPROJECT/[PROJECTNAME]/g Dockerfile
-```
-
-Dockerfileは、デフォルトではプロジェクト名がMYPROJECTになっているので、sedコマンドであなたのプロジェクト名（[PROJECTNAME]）に書き換えています。
-
-(Since the default Dockerfile has a project name of MYPROJECT, it is rewritten to your project name ([PROJECTNAME]) using the sed command.)
 
 ### ・Execution
 `docker-compose.yml`が存在するディレクトリで以下のコマンドを実行します。
@@ -83,6 +69,3 @@ $ docker restart CONTAINERNAME
 CONTAINERNAMEには、Djangoコンテナのコンテナ名を入れてください。
 
 (In CONTAINERNAME, write container name of "Django Container".)
-
-
-
